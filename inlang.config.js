@@ -14,6 +14,10 @@ export async function defineConfig(env) {
     referenceResourcePath: null,
   };
 
+  const { default: standardLintRules } = await env.$import(
+    "https://cdn.jsdelivr.net/gh/inlang/standard-lint-rules@1.1.1/dist/index.js"
+  );
+
   return {
     referenceLanguage: "en",
     languages: [
@@ -43,5 +47,8 @@ export async function defineConfig(env) {
       plugin.readResources({ ...args, ...env, pluginConfig }),
     writeResources: (args) =>
       plugin.writeResources({ ...args, ...env, pluginConfig }),
+    lint: {
+      rules: [standardLintRules()],
+    },
   };
 }
