@@ -24,7 +24,7 @@ msgstr "Token enthält keine erkennbare Benutzeridentifikation"
 
 #: authentication.py:121
 msgid "User not found"
-msgstr "Benutzer nicht gefunden"
+msgstr "Benutzer nicht gefunden asdf"
 
 #: authentication.py:124
 msgid "User is inactive"
